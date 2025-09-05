@@ -1,0 +1,231 @@
+.player-rankings {
+  padding: 20px;
+}
+
+.rankings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rankings-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sport-selector,
+.category-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sport-selector label,
+.category-selector label {
+  font-weight: 500;
+  color: #666;
+  white-space: nowrap;
+}
+
+.sport-selector select,
+.category-selector select {
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  min-width: 140px;
+}
+
+.loading-section {
+  text-align: center;
+  padding: 60px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rankings-content {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rankings-list {
+  padding: 0;
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.player-card:hover {
+  background: #f8f9fa;
+}
+
+.player-card:last-child {
+  border-bottom: none;
+}
+
+.rank-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.player-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.player-name {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-team {
+  margin: 0 0 3px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.player-country {
+  font-size: 12px;
+  color: #888;
+}
+
+.player-stats {
+  flex: 1;
+  max-width: 300px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 2px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rankings-footer {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.rankings-footer p {
+  margin: 0 0 15px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.rankings-footer button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.rankings-footer button:hover {
+  background: #218838;
+}
+
+.rankings-footer button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .rankings-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters {
+    justify-content: center;
+  }
+  
+  .player-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .rank-badge {
+    margin-right: 0;
+    align-self: center;
+  }
+  
+  .player-info {
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  .stat-value {
+    font-size: 18px;
+  }
+}
